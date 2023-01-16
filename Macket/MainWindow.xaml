@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Macket"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="230" Width="350">
     <Grid>
-        
+        <StackPanel Margin="10,10,10,10">
+            <TextBlock Style="{StaticResource TextBlockk}">Выберите арифметическую операцию</TextBlock>
+            <ComboBox SelectionChanged="ComboBoxOperation_SelectionChanged"  FontSize="15"  Name="ComboBoxOperation"></ComboBox>
+            <StackPanel Margin="0,7,0,7" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Style="{StaticResource TextBoxNumber}" Name="TextBoxNumberOne"></TextBox>
+                <TextBlock FontSize="15"  VerticalAlignment="Center">+</TextBlock>
+                <TextBox Style="{StaticResource TextBoxNumber}" Name="TextBoxNumberTwo"></TextBox>
+            </StackPanel>
+            <Button FontSize="15"  Name="ButtonCalculate">Вычислить</Button>
+            <GroupBox Header="Результат:" FontSize="15" > 
+                <TextBlock FontSize="15"  Name="TextBlockResult"></TextBlock>
+            </GroupBox>
+        </StackPanel>
     </Grid>
 </Window>

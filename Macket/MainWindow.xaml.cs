@@ -22,7 +22,15 @@ namespace Macket
     {
         public MainWindow()
         {
+            
             InitializeComponent();
+            Model.textResult = TextBlockResult;
+            ComboBoxOperation.ItemsSource = Model.datalist;
+        }
+
+        private void ComboBoxOperation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Model.Comdo = ComboBoxOperation.SelectedIndex;
         }
     }
 }
