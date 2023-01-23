@@ -24,13 +24,22 @@ namespace Macket
         {
             
             InitializeComponent();
+            Model.textCombo = TextBlockOperator;
+            Model.OneNumber = TextBoxNumberOne;
+            Model.TwoNumber = TextBoxNumberTwo;
             Model.textResult = TextBlockResult;
             ComboBoxOperation.ItemsSource = Model.datalist;
+            ComboBoxOperation.SelectedIndex = 0;
         }
 
         private void ComboBoxOperation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Model.Comdo = ComboBoxOperation.SelectedIndex;
+            Model.Comdo = ComboBoxOperation.SelectedIndex;
+        }
+
+        private void ButtonCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            Model.Result = ComboBoxOperation.SelectedIndex;
         }
     }
 }
